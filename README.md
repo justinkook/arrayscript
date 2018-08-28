@@ -1,0 +1,2 @@
+# arrayscript
+activity 30
