@@ -79,9 +79,10 @@ if (userInput === 'contains') {
 if (userInput === 'delete') {
   const verifyInfo = prompt('name to delete');
   for (i = 0; i < employeeList.length; i++) {
+    //need case sensitive name matching so Jan ==== Jan
     if (verifyInfo === employeeList[i].name) {
-      console.log(i);
       employeeList.splice(i, 1);
+      //need a new for loop as i is set to 0 if name is Jan
       for (i = 0; i < employeeList.length; i++) {
         render(employeeList[i].name, employeeList[i].officeNum, employeeList[i].phoneNum);
       }
